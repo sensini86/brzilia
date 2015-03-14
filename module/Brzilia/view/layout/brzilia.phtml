@@ -1,0 +1,44 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Дюнер Brzilia, най - качествените дюнери в България.">
+        <meta name="keywords" content="asenovgrad, plovdiv, brzilia, doner, doner kebab, kebab, turkish, turkish doner kebab, turkish kebab, дюнер, кебаб, дунер, пица, пицария,бърза храна, закуска, асеновград, пловдив">
+        <meta name="author" content="Brzilia">
+
+        
+        <?php echo $this->headTitle($this->translate('Brzilia Doner'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon3.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/spinner.css')
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    </head>
+    <body>
+
+        <?php echo $this->render('custom/nav.phtml'); ?>
+<!--        <div style="padding-top: 90px">
+        <?php // echo $this->navigation('navigation')->breadcrumbs()->setMinDepth(0)->setPartial('partial/breadcrumb.phtml'); ?>
+        </div>-->
+        <?php echo $this->content; ?>
+        <?php echo $this->render('custom/footer.phtml'); ?>
+
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

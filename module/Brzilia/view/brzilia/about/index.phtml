@@ -1,0 +1,48 @@
+<div class="container" style="padding-top: 150px;">
+    <div class="panel panel-default">
+        <div class="panel-heading"><div class="panel-title">Title</div></div>
+        <div class="panel-body text-justify">
+            <div  class="row">
+                <div class="col-sm-12"><!-- <div class="pull-left" style="padding-right: 10px;"> -->
+                    <img class="img-circle img-responsive pull-left" style="padding-right: 10px;" title="" alt="" src="../img/pic4.jpg">
+                    <p>Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. </p>
+                    <p>Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. </p>
+                    <p>Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. Началото на компанията е поставено през 2014г. </p>
+                    <?php
+                    /*
+                    <p>Началото на компанията е поставено през 1998 г. През годините заведенията от веригата, както и предлаганите специалитети, стават много добре разпознаваеми във всички областни градове на България. Развитието и утвърждаването на пазара довежда до преименуването на веригата през 2011 г. от „Аладин Дюнер“ на Aladin Foods.</p>
+                    <p>Заведенията за бързо хранене наброяват 25 в цялата страна, като само през 2013 година сa открити нови 6 обекта за бързо хранене.</p>
+                    <p>В компанията в момента работят близо 700 души. Aladin Foods развива няколко дейности – освен верига заведения за бързо хранене има и собствено производство и дистрибуция на пилешко месо, картофи, арабски хляб и патентован сос "Аладин". Фирмата държи на високия професионализъм във всяка една от дейностите, които изпълнява.</p>
+                    */
+                    ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h2 class="text-center text-info">Къде се намираме ...</h2>
+                    <div id="map-canvas" style="width: 400px; height: 300px"></div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(42.023822, 24.841493);
+  var mapOptions = {
+    zoom: 15,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Welcome to Brzilia doner'
+  });
+}
+google.maps.event.addDomListener(window, 'resize', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
