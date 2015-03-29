@@ -11,7 +11,7 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
     
-    public function testAction()
+    public function testAction($param)
     {
         
     }
