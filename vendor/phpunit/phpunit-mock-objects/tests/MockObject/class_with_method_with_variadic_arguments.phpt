@@ -8,9 +8,9 @@ if (version_compare(PHP_VERSION, '5.6.0', '<')) print 'skip: PHP >= 5.6.0 requir
 <?php
 class ClassWithMethodWithVariadicArguments
 {
-    public function methodWithVariadicArguments($a, ...$parameters)
-    {
-    }
+//    public function methodWithVariadicArguments($a, ...$parameters)
+//    {
+//    }
 }
 
 require __DIR__ . '/../../vendor/autoload.php';
